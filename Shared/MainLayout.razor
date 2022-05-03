@@ -1,0 +1,65 @@
+﻿@inherits LayoutComponentBase
+
+
+<div class="main">
+    <header style="background-color:lightblue;">
+
+        @*<header class="nav flex-column">*@
+        @*<button @onclick="toggle"> toggle <span class="navbar-toggler-icon"></span></button>*@
+
+        @*<div class="top-row pl-4 navbar navbar-dark">*@
+        <ul class="nav flex-column" style="width: 200px; background-color: lightblue;">
+            <li class="nav-item" style="padding-left: 16px;padding-right: 16px;">
+                <NavLink class="nav-link" >
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> HiccOps 
+                </NavLink>
+            </li>
+        </ul>
+
+        @*<button @onclick="toggle" style="width:200px;">
+                <span class="oi oi-list-rich" aria-hidden="true" style="margin-left:20px;"></span>HiccOps
+            </button>*@
+        @*<div style="display:flex; width:100%;">
+
+            </div>*@
+
+
+        @*</div>*@
+
+
+        @*<a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>*@
+    </header>
+
+    <div class="myContainer">
+        <div class="@sidebarClass">
+            <NavMenu />
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+
+</div>
+
+@code{
+
+    private bool collapseSidebar = false;
+
+    private string sidebarClass = "side";
+    public string sideBuff { get; set; }
+
+    private void toggle()
+    {
+        collapseSidebar = !collapseSidebar;
+
+        if (collapseSidebar)
+        {
+            sidebarClass = "sideGone";
+        }
+        else
+        {
+            sidebarClass = "side";
+        }
+    }
+}

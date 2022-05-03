@@ -1,0 +1,159 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.top-row {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+}
+
+header {
+    height: 3.5rem;
+    border: 1px solid;
+    position:sticky;
+    top:0;
+    background-color:white;
+    z-index:200;
+}
+
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.myContainer{
+    border: 1px solid;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+.side {   
+    background-color: darkblue;
+}
+
+.sideGone{
+    display:none;
+}
+
+.sideBuff{
+    width:200px;
+}
+
+@media (max-width: 767.98px) {
+
+    .myContainer {
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side {
+        width: 100%;
+    }
+
+    /*    .main .top-row:not(.auth) {
+        display: none;
+    }
+
+    .main .top-row.auth {
+        justify-content: space-between;
+    }
+
+    .main .top-row a, .main .top-row .btn-link {
+        margin-left: 0;
+    }*/
+}
+
+@media (min-width: 768px) {
+
+    .myContainer {
+        border: 1px solid;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .side {
+        width: 200px;
+        height: 100vh;
+        top: 3.5rem;
+        position: fixed;
+    }
+    /*app {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0px;
+    }
+
+    .main .top-row {
+        position: sticky;
+        top: 0;
+    }
+
+    .main > div {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .sidebar .collapse {*/
+        /* Never collapse the sidebar for wide screens */
+        /*display: block;
+    }*/
+}
